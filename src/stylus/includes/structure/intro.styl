@@ -1,6 +1,6 @@
 .intro
 
-  height 600px
+  height auto
   background #000 url('../assets/structure/intro.jpg') center no-repeat
 
   .row
@@ -17,6 +17,14 @@
         align-items center
         justify-content space-between
 
+        @media $tablet
+
+          justify-content center
+
+        @media $phone
+
+          justify-content center
+
         .logo
 
           // Code here
@@ -27,7 +35,15 @@
 
         .login
 
-          // Code here
+          display block
+
+          @media $tablet
+
+            display none
+
+          @media $phone
+
+            display none
 
           a
 
@@ -53,6 +69,14 @@
           padding 1em 0
           color $gray-lighter
           font-family $varela-round
+
+          @media $tablet
+
+            padding-top 0
+
+          @media $phone
+
+            padding-top 0
 
         .social
 
@@ -94,6 +118,43 @@
 
         .new-account
 
+          display block
           color $gray-lighter
           margin 0
           padding 1em 0
+
+          @media $tablet
+
+            display none
+
+          @media $phone
+
+            display none
+
+.sm-login-account
+
+  // Code here
+
+  .row
+
+    // Code here
+
+    .container
+
+      padding 1em 0
+
+      .col-xs-6
+
+        // Code here
+
+        &:last-child
+
+          border-left 1px solid $gray
+
+        .login
+
+          text-align center
+
+        .new-account
+
+          text-align center
